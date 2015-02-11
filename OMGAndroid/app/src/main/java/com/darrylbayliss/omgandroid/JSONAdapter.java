@@ -110,7 +110,6 @@ public class JSONAdapter extends BaseAdapter {
         holder.titleTextView.setText(bookTitle);
         holder.authorTextView.setText(authorName);
 
-
         return convertView;
     }
 

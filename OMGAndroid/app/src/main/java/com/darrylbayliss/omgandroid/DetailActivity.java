@@ -61,8 +61,7 @@ public class DetailActivity extends ActionBarActivity {
         // Access the object responsible for
         // putting together the sharing submenu
         if (shareItem != null) {
-            mShareActionProvider
-                    = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
+            mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
         }
 
         setShareIntent();

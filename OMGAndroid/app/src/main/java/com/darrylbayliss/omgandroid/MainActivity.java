@@ -5,16 +5,15 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.widget.ShareActionProvider;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -132,7 +131,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // 12. Now that the user's chosen a book, grab the cover data
         JSONObject jsonObject = (JSONObject) mJSONAdapter.getItem(position);
-        String coverID = jsonObject.optString("cover_i","");
+        String coverID = jsonObject.optString("cover_i", "");
 
         // create an Intent to take you over to a new DetailActivity
         Intent detailIntent = new Intent(this, DetailActivity.class);
@@ -193,7 +192,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             // that simply dismisses the alert
             alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
-                public void onClick(DialogInterface dialog, int whichButton) {}
+                public void onClick(DialogInterface dialog, int whichButton) {
+
+                }
             });
 
             alert.show();
